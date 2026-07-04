@@ -7,6 +7,7 @@ public class Tarjeta_credito
 {
     public string Tipo { get; set; }
     public double Cupo { get; set; }
+    public int id_cliente { get; set; }
     public double Interes { get; set; }
     public int Max_cuotas { get; set; }
     public int Min_cuotas { get; set; }
@@ -18,11 +19,12 @@ public class Tarjeta_credito
 
 
 
-    public Tarjeta_credito(string tipo, double cupo, double interes, int maxcuotas, int minCuotas,
+    public Tarjeta_credito(string tipo, double cupo, int idCliente ,double interes, int maxcuotas, int minCuotas,
         DateTime fechaApertura, DateTime fechaVencimiento, string estado)
     {
         this.Tipo = tipo;
         this.Cupo = cupo;
+        this.id_cliente = idCliente;
         this.Interes = interes;
         this.Max_cuotas = maxcuotas;
         this.Min_cuotas = minCuotas;
@@ -37,6 +39,7 @@ public class Tarjeta_credito
     {
         this.No_credito = GenerarNuneroCredito();
         this.Cvv = Cvvauto();
+        this.Interes = 1.70;
     }
 
     private string GenerarNuneroCredito()
@@ -70,7 +73,7 @@ public class Tarjeta_creditoFactory
         _connString =  connString;
     }
 
-    public int insertcreditcard(string conn)
+    public int insertcreditcard(Tarjeta_credito tart)
     {
         using var portalbase = new NpgsqlConnection(_connString);
         portalbase.Open();
@@ -81,7 +84,14 @@ public class Tarjeta_creditoFactory
             "RETURNING id_tarjeta_credito";
 
         var mensajero = new NpgsqlCommand(paquete, portalbase);
-        mensajero.Parameters.AddWithValue("tipo", conn. );
-
+        mensajero.Parameters.AddWithValue("tipo", tart.Tipo );
+        mensajero.Parameters.AddWithValue("cupo", tart.Cupo);
+        mensajero.Parameters.AddWithValue("id_cliente", tart.id_cliente);
+        mensajero.Parameters.AddWithValue("interes", tart.Interes);
+        
+        object ss = mensajero.ExecuteScalar();
+        int id = (int)ss;
+        return id;
+        
     }
 }
