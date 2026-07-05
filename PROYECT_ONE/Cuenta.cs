@@ -26,6 +26,7 @@ public class Cuenta
 
     public Cuenta()
     {
+        this.Saldo = 0;
         this.No_cuenta = GenerarNuneroCuenta();
     }
 
