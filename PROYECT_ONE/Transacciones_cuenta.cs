@@ -30,10 +30,51 @@ public class Transacciones_cuenta
 public class Transacciones_cuenta_Repository
 {
     private readonly string _ConnString;
+    
 
     public Transacciones_cuenta_Repository(string connString)
     {
         this._ConnString = connString;
+    }
+
+
+    public decimal evaluar_trans(Transacciones_cuenta tran_cun)
+    {
+       using var Portalbase = new NpgsqlConnection(_ConnString);
+       Portalbase.Open();
+
+       var mensaje = "SELECT saldo FROM cuenta WHERE no_cuenta = @producto_origen ";
+                     
+       
+       var mensajero = new NpgsqlCommand(mensaje, Portalbase);
+       mensajero.Parameters.AddWithValue("producto_origen", tran_cun.Producto_origen);
+       using var hay = mensajero.ExecuteReader();
+       if (hay.Read())
+       {
+           decimal saldo = hay.GetDecimal(0);
+           return saldo;
+       }
+
+       throw new Exception("Cuenta no encontrada");
+
+    }
+
+
+    public void diferencia_saldos(Transacciones_cuenta trans_cun)
+    {
+        using var Portalbase = new NpgsqlConnection(_ConnString);
+        Portalbase.Open();
+        var mensaje =
+            "UPDATE cuenta SET saldo = saldo-(@monto+@costo_trans) WHERE no_cuenta = @producto_origen;" +
+            "UPDATE cuenta SET saldo = saldo+(@monto) WHERE no_cuenta = @producto_destino;";
+        
+        var mensajero = new NpgsqlCommand(mensaje, Portalbase);
+        mensajero.Parameters.AddWithValue("producto_origen", trans_cun.Producto_origen);
+        mensajero.Parameters.AddWithValue("monto", trans_cun.Monto);
+        mensajero.Parameters.AddWithValue("producto_destino", trans_cun.Producto_destino);
+        mensajero.Parameters.AddWithValue("costo_trans", trans_cun.Costo_trans);
+
+        mensajero.ExecuteNonQuery();
     }
 
     public void InsTrans_cuenta(Transacciones_cuenta trans_cun)
