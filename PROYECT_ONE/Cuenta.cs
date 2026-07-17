@@ -6,31 +6,30 @@ using Npgsql;
 public class Cuenta
 {
     public string Tipo { get; set; }
+    public int Id_cliente { get; set; }
     public decimal Saldo { get; set; }
     public string No_cuenta { get; set; }
-    public string Estado { get; set; }
+    public string Estado { get; set; }  
     public DateTime Fecha_apertura { get; set; }
     public DateTime Fecha_vencimiento { get; set; }
 
 
-    public Cuenta(string tipo, decimal saldo, DateTime fecha_apertura, DateTime fechaVencimiento ,string estado)
+    public Cuenta(string tipo, int idCliente ,decimal saldo, DateTime fecha_apertura, DateTime fechaVencimiento ,string estado)
     {
         this.Tipo = tipo;
+        this.Id_cliente = idCliente;
         this.Saldo = saldo;
-        this.No_cuenta = GenerarNuneroCuenta();
-        this.Estado = estado;
+        this.No_cuenta = GenerarNumeroCuenta();
         this.Fecha_apertura = fecha_apertura;
         this.Fecha_vencimiento = fechaVencimiento;
         this.Estado = estado;
     }
 
-    public Cuenta()
+    public Cuenta(string tipo, int idCliente) : this(tipo, idCliente,0, DateTime.Now, DateTime.Now.AddYears(3), "ACTIVO")
     {
-        this.Saldo = 0;
-        this.No_cuenta = GenerarNuneroCuenta();
     }
 
-    private string GenerarNuneroCuenta()
+    private string GenerarNumeroCuenta()
     {
         byte[] bytes = new byte[16];
         RandomNumberGenerator.Fill(bytes);
@@ -61,12 +60,13 @@ public class CuentaRepository
         puerta.Open();
 
         var banco =
-            "INSERT INTO cuenta (tipo, saldo, no_cuenta, fecha_apertura, estado, fecha_vencimiento)" +
-            "VALUES (@tipo, @saldo, @no_cuenta, @fecha_apertura, @estado, @fecha_vencimiento)" +
+            "INSERT INTO cuenta (tipo, id_cuenta ,saldo, no_cuenta, fecha_apertura, estado, fecha_vencimiento)" +
+            "VALUES (@tipo, @id_cuenta, @saldo, @no_cuenta, @fecha_apertura, @estado, @fecha_vencimiento)" +
             "RETURNING id_cuenta";
 
         using var puertafinal = new  NpgsqlCommand(banco, puerta);
         puertafinal.Parameters.AddWithValue("tipo", cunn.Tipo );
+        puertafinal.Parameters.AddWithValue("id_cliente", cunn.Id_cliente);
         puertafinal.Parameters.AddWithValue("saldo", cunn.Saldo);
         puertafinal.Parameters.AddWithValue("no_cuenta", cunn.No_cuenta);
         puertafinal.Parameters.AddWithValue("fecha_apertura", cunn.Fecha_apertura);

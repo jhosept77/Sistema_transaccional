@@ -18,3 +18,4 @@ C:\Users\torre\RiderProjects\PROYECT_ONE\PROYECT_ONE\obj\Debug\net8.0\refint\PRO
 C:\Users\torre\RiderProjects\PROYECT_ONE\PROYECT_ONE\obj\Debug\net8.0\PROYECT_ONE.pdb
 C:\Users\torre\RiderProjects\PROYECT_ONE\PROYECT_ONE\obj\Debug\net8.0\PROYECT_ONE.genruntimeconfig.cache
 C:\Users\torre\RiderProjects\PROYECT_ONE\PROYECT_ONE\obj\Debug\net8.0\ref\PROYECT_ONE.dll
+C:\Users\torre\RiderProjects\PROYECT_ONE\PROYECT_ONE\obj\Debug\net8.0\PROYECT_ONE.sourcelink.json

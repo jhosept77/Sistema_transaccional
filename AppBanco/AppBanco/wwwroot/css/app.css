@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+* {font-family: 'Montserrat', sans-serif;}
+h3 {font-weight: 400;}
+h4 {font-weight: 400 !important;}
+
+
+.ingreso{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    background: midnightblue;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+   
+    
+}
+
+.usuario{
+    width: 400px;
+    height: 50px;
+    background: steelblue;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 250px;        
+    box-sizing: border-box;
+    font-weight: 300;
+}
+
+.password{
+    width: 400px;
+    height: 50px;
+    background: steelblue;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 300px;
+    box-sizing: border-box;
+    
+}
+
+.iniciar-sesion{
+    width: 400px;
+    height: 50px;
+    background: white;
+    position: absolute;
+    top: 71%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.txt-password{
+    color: white !important;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 54.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-right: 270px;
+    
+}
+
+.txt-olvcontr{
+    color: white !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 54.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 190px;
+    width: 350px;
+}
+
+.txt-usuario{
+    font-weight: 600;
+    color: white !important;
+    justify-content: center;
+    position: absolute;
+    top: 36.2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-right: 300px;
+}
+
+
+.txt-bien{
+    color: white !important;
+    justify-content: center;
+    position: absolute;
+    top: 19%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-right: 91px;
+    width: 300px;
+    
+}
+
+.txt-bien2{
+    color: white !important;
+    justify-content: center;
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 10px;
+    width: 400px;
+}
+
+
+.txt-cunetaCrear{
+    color: white !important;
+    justify-content: center;
+    position: absolute;
+    top: 88.2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-right: 140px;
+    font-size: 13px;
+}
+
+
+.crearCun{
+    color: white !important;
+    justify-content: center;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 130px;
+}
+
+
+.Informacion-ingreso{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    background: whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+
+
