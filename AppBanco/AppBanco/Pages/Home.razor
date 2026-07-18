@@ -2,18 +2,36 @@
 @page "/login"
 
 <div class="ingreso">
-    <div class="formulario-ingreso">
+    <div class="Bienbenida">
         <h2 class="txt-bien">Bienvenido de nuevo !</h2>
-        <h4 class="txt-bien2">Ingresa con tu usuario y contraseña a tu banca</h4>
-        <h5 class="txt-usuario">USUARIO</h5>
-        <div class="usuario"><span>EJ:JUN30ORT</span></div>
-        <h5 class="txt-password">CONTRASEÑA</h5>
-        <h4 class="password">********</h4>
-        <h3 class="iniciar-sesion">Iniciar sesion</h3>
-        <h5 class="txt-olvcontr">¿Olvidaste tu contraseña?</h5>
-        <div class="txt-cunetaCrear"><span>¿No tienes cuenta?</span></div>
-        <h5 class="crearCun">Solicitarla AQUI!</h5>
+        <p class="txt-bien2">Ingresa con tu usuario y contraseña a tu banca</p>
     </div>
+           
+    <div class="btn-usuario">
+        <label class="etiqueta">USUARIO</label>
+        <div class="usuario">
+            <input type="text" placeholder="EJ:JUN30ORT"/>
+        </div>
+    </div>
+    
+    <div class="btm-password">
+        <div class="fila-etiqueta-password">
+            <label class="etiqueta">CONTRASEÑA</label>
+            <button class="btn-olvido">¿Olvidaste tu contraseña?</button>
+        </div>
+        <div class="password">
+            <input type="password" placeholder="********"/>
+        </div>
+    </div>
+    
+    <button class="iniciar-sesion">Iniciar sesion</button>
+        
+    <p class="crearCun">¿No tienes cuenta? <button class="btn-solicitar">
+        <strong>¡Solicítala AQUÍ!</strong>
+    </button></p>
 </div>
 
-<div class="Informacion-ingreso">jjjjjj</div>
+<div class="Informacion-ingreso">
+    <div class="Titulo-app"><span>Aura</span></div>
+    <div class="Tipo-banco"><span>BANCO PRIVADO</span></div>
+</div>
