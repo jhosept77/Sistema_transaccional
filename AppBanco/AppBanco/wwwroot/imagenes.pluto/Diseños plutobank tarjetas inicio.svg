@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW (Versión de evaluación) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="138.173mm" height="201.744mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 3396.01 4958.44"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#373435;stroke-width:4.92;stroke-miterlimit:22.9256}
+    .str1 {stroke:#373435;stroke-width:2.46;stroke-miterlimit:22.9256}
+    .fil4 {fill:none}
+    .fil6 {fill:#201E1E;fill-rule:nonzero}
+    .fil1 {fill:url(#id0)}
+    .fil2 {fill:url(#id1)}
+    .fil0 {fill:url(#id2)}
+    .fil3 {fill:url(#id3)}
+    .fil5 {fill:url(#id4);fill-rule:nonzero}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="347.21" y1="2489.73" x2="3133.78" y2="2489.73">
+   <stop offset="0" style="stop-opacity:1; stop-color:#117FB6"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#45BDA1"/>
+  </linearGradient>
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="3315.81" y1="879.1" x2="684.73" y2="3523.13">
+   <stop offset="0" style="stop-opacity:1; stop-color:#404040"/>
+   <stop offset="0.258824" style="stop-opacity:1; stop-color:#494746"/>
+   <stop offset="0.509804" style="stop-opacity:1; stop-color:#726F6E"/>
+   <stop offset="0.74902" style="stop-opacity:1; stop-color:#ACA9A8"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#636061"/>
+  </linearGradient>
+  <linearGradient id="id2" gradientUnits="userSpaceOnUse" x1="-39.65" y1="2182.97" x2="2826.22" y2="3336.6">
+   <stop offset="0" style="stop-opacity:1; stop-color:#718FC8"/>
+   <stop offset="0.529412" style="stop-opacity:1; stop-color:#ADBCE0"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#FEFEFE"/>
+  </linearGradient>
+  <linearGradient id="id3" gradientUnits="userSpaceOnUse" x1="3144.06" y1="435.47" x2="2597.84" y2="771.54">
+   <stop offset="0" style="stop-opacity:1; stop-color:#7D7D7E"/>
+   <stop offset="0.478431" style="stop-opacity:1; stop-color:#CCCECF"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#7D7D7E"/>
+  </linearGradient>
+  <linearGradient id="id4" gradientUnits="userSpaceOnUse" x1="1271.21" y1="3299.96" x2="2484.33" y2="2022.22">
+   <stop offset="0" style="stop-opacity:1; stop-color:#B9D0DE"/>
+   <stop offset="0.0784314" style="stop-opacity:1; stop-color:#BFD3DE"/>
+   <stop offset="0.101961" style="stop-opacity:1; stop-color:#C6D7DF"/>
+   <stop offset="0.160784" style="stop-opacity:1; stop-color:#CEDCE3"/>
+   <stop offset="0.2" style="stop-opacity:1; stop-color:#D6E1E7"/>
+   <stop offset="0.329412" style="stop-opacity:1; stop-color:#E8EDF0"/>
+   <stop offset="0.639216" style="stop-opacity:1; stop-color:#FEFEFE"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:white"/>
+  </linearGradient>
+ </defs>
+ <g id="Capa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2109709438624">
+   <rect class="fil0" x="-0" y="561.12" width="2786.57" height="4397.32" rx="250.61" ry="243.69"/>
+   <rect class="fil1" x="347.21" y="291.07" width="2786.57" height="4397.32" rx="250.61" ry="243.69"/>
+   <rect class="fil2 str0" x="606.99" y="2.46" width="2786.57" height="4397.32" rx="250.61" ry="243.69"/>
+   <g>
+    <rect class="fil3 str0" x="2582.26" y="233.05" width="577.39" height="740.92" rx="97.81" ry="89.65"/>
+    <rect class="fil4 str0" x="2672.37" y="340.2" width="391.56" height="512.62" rx="66.33" ry="62.03"/>
+    <rect class="fil4 str1" x="2792.49" y="233.05" width="181.61" height="107.15"/>
+    <rect class="fil4 str0" x="2792.49" y="852.82" width="181.61" height="121.15"/>
+   </g>
+   <path class="fil5" d="M1322.25 3707.53c-58.22,0 -94.28,-36.06 -94.28,-94.28l0 -1141c0.8,-61.79 8.54,-121.32 23.73,-178.36 -15.22,58.79 -22.81,121 -22.81,186.64 0,128.94 29.41,244.17 88.22,345.7 27.64,47.65 59.96,90.62 96.99,128.88l0 658.14c0,56.25 -34.83,94.28 -91.85,94.28z"/>
+   <path class="fil6" d="M1903.34 3154.99c125.7,0 238.92,-29.01 339.64,-87.03 100.73,-58.02 180.5,-137.39 239.32,-238.11 58.82,-100.72 89.04,-213.94 90.65,-339.64l0 -1141c0,-29.01 -8.46,-51.97 -25.38,-68.89 -16.92,-16.92 -39.89,-25.38 -68.89,-25.38 -27.4,0 -49.56,8.46 -66.48,25.38 -16.92,16.92 -25.38,39.89 -25.38,68.89l0 710.71c-53.18,-75.74 -123.69,-136.58 -211.52,-182.51 -87.83,-45.93 -185.74,-68.9 -293.71,-68.9 -124.09,0 -235.29,29.41 -333.6,88.23 -98.31,58.82 -176.06,139 -233.27,240.53 -57.21,101.53 -85.82,215.95 -85.82,343.27 0,128.93 29.41,244.15 88.23,345.68 58.82,101.53 139,181.7 240.53,240.53 101.53,58.82 216.76,88.23 345.68,88.23zm0 -169.22c-93.47,0 -177.27,-22.16 -251.41,-66.48 -74.13,-44.32 -132.55,-104.35 -175.26,-180.09 -42.71,-75.74 -64.06,-161.96 -64.06,-258.66 0,-95.08 21.35,-180.9 64.06,-257.45 42.71,-76.55 101.13,-136.58 175.26,-180.09 74.13,-43.51 157.94,-65.27 251.41,-65.27 91.86,0 174.86,21.76 248.99,65.27 74.13,43.51 132.15,103.54 174.05,180.09 41.9,76.55 62.85,162.37 62.85,257.45 0,96.69 -20.95,182.91 -62.85,258.66 -41.9,75.74 -99.92,135.78 -174.05,180.09 -74.13,44.32 -157.13,66.48 -248.99,66.48z"/>
+  </g>
+ </g>
+</svg>
