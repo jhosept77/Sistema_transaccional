@@ -1,0 +1,288 @@
+
+.Fondo-Solicitar-page-2{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    background: #e3f2fd;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 60px;
+}
+
+.barra-superior{
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    background: #e3f2fd;
+    align-content: center;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.ing-titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: auto;
+    margin-right: 80px;
+}
+
+.numero-pagina{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-volver{
+    color: black;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+}
+
+.stepper{
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 30vh;
+    gap: 15px;
+    justify-content: center;
+    align-content: center;
+    margin-top: 80px;
+    box-sizing: border-box;
+    padding-top: 40px;
+
+}
+
+.paso-activo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+}
+
+.etiqueta{
+    position: absolute;
+    top: 40px;
+    white-space: nowrap;
+    margin-left: 75px;
+}
+
+
+.linea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 2px;
+    background: black;
+    margin-top: 14px;
+}
+
+.circulo{
+    display: flex;
+    border-radius: 50%;
+    background: white;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.circulo-activo{
+    background: transparent;
+    border: 2px solid midnightblue;
+    color: midnightblue;
+}
+
+.circulo-completado{
+    background: midnightblue;
+    color: #e3f2fd;
+}
+
+.linea-completada{
+    background: midnightblue;
+    border: 2px solid midnightblue;
+    border-radius: 7px;
+}
+.circulo-futuro{
+    background: #1c2638;
+    color: #e3f2fd;
+}
+
+.linea-futuro{
+    background: #1c2638;
+}
+
+.paso-contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+
+.txt-tipo-cun-abrir{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    margin-left: 320px;¿height: 30vh;
+    margin-top: -70px;
+}
+
+.txt-titulo-1{
+    font-size: 2rem;
+}
+
+.caja-principal{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+    margin-top: 90px;
+    align-items: center;
+    flex-direction: column;
+    gap: 53px;
+}
+
+.subcaja-1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10vh;
+    justify-content: center;
+    gap: 40px;
+    margin-right: 12px;
+}
+
+
+.nombre, .apellido{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.input-nombre, .input-apellido, .input-fecha-nacido, .input-genero{
+    width: 412px;
+    height: 55px;
+    background: white;
+    align-content: center;
+    padding: 0 15px;
+    border-radius: 30px;
+    border: 2px solid lightskyblue;
+    
+}
+
+.btn-anterior, .btn-siguiente{
+    width: 412px;
+    height: 55px;
+    background: white;
+    align-content: center;
+    padding: 0 15px;
+    border-radius: 30px;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-siguiente:hover, .btn-anterior:hover{
+    border: 2px solid steelblue;
+}
+
+.input-nacionalidad{
+    width: 864px;
+    height: 55px;
+    background: white;
+    align-content: center;
+    padding: 0 15px;
+    border-radius: 30px;
+    border: 2px solid lightskyblue; 
+    margin-right: 7px;
+    margin-left: 47px;
+}
+
+
+.etiqueta-nombre,.etiqueta-apellido, .etiqueta-fecha-nacido, .etiqueta-genero, .etiqueta-nacionalidad{
+    margin-left: 18px;
+    gap: 800px;
+}
+
+.int, .selecionador-genero{
+    display: flex;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.selecionador-nacionalidad{
+    display: flex;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.subcaja-2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10vh;
+    justify-content: center;
+    gap: 40px;
+    margin-right: 12px;
+}
+
+.selecionador-genero{
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 30px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.subcaja-3{
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: center;
+    gap: 40px;
+}
+
+.Nacionalidad{
+    display: flex;
+    width: 50%;
+    height: 10vh;
+    flex-direction: column;
+    margin-right: 210px;
+}
+
+.subcaja-4{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10vh;
+    justify-content: center;
+    gap: 40px;
+    margin-right: 12px;
+}
+
+
+
+

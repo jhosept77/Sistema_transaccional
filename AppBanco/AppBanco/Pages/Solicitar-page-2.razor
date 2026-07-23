@@ -1,0 +1,190 @@
+﻿
+@page "/Solicitar-page-2"
+<link rel="stylesheet" href="css/Solicitar-page-2.css"/>
+
+
+<div class="Fondo-Solicitar-page-2">
+
+    <div class="barra-superior">
+        <button class="btn-volver">Volver al inicio</button>
+        <img src="imagenes.pluto/Diseños%20plutobank%20TITULO.svg" alt="titulo-plutobank" class="ing-titulo">
+        <p class="numero-pagina"><span>@pasoActual</span> de 5</p>
+
+    </div>
+
+
+   <div class="stepper">
+
+
+        <div class="paso-contenedor @(pasoActual == 1 ? "paso-activo" : "")">
+            <div
+                class="circulo @(pasoActual == 1 ? "circulo-activo" : (pasoActual > 1 ? "circulo-completado" : "circulo-futuro"))">
+                <span>@(pasoActual > 1 ? "✓" : "1")</span>
+            </div>
+            @if (pasoActual == 1)
+            {
+                <span class="etiqueta">Tipo de cuenta</span>
+            }
+        </div>
+
+        <div class="linea @(pasoActual > 1 ? "linea-completada" : "linea-futura")"></div>
+
+
+        <div class="paso-contenedor @(pasoActual == 2 ? "paso-activo" : "")">
+            <div
+                class="circulo @(pasoActual == 2 ? "circulo-activo" : (pasoActual > 2 ? "circulo-completado" : "circulo-futuro"))">
+                <span>@(pasoActual > 2 ? "✓" : "2")</span>
+            </div>
+            @if (pasoActual == 2)
+            {
+                <span class="etiqueta">Datos personales</span>
+            }
+        </div>
+
+        <div class="linea @(pasoActual > 2 ? "linea-completada" : "linea-futura")"></div>
+
+
+        <div class="paso-contenedor @(pasoActual == 3 ? "paso-activo" : "")">
+            <div
+                class="circulo @(pasoActual == 3 ? "circulo-activo" : (pasoActual > 3 ? "circulo-completado" : "circulo-futuro"))">
+                <span>@(pasoActual > 3 ? "✓" : "3")</span>
+            </div>
+        </div>
+
+        <div class="linea @(pasoActual > 3 ? "linea-completada" : "linea-futura")"></div>
+
+
+        <div class="paso-contenedor @(pasoActual == 4 ? "paso-activo" : "")">
+            <div
+                class="circulo @(pasoActual == 4 ? "circulo-activo" : (pasoActual > 4 ? "circulo-completado" : "circulo-futuro"))">
+                <span>@(pasoActual > 4 ? "✓" : "4")</span>
+            </div>
+        </div>
+
+        <div class="linea @(pasoActual > 4 ? "linea-completada" : "linea-futura")"></div>
+
+
+        <div class="paso-contenedor @(pasoActual == 5 ? "paso-activo" : "")">
+            <div
+                class="circulo @(pasoActual == 5 ? "circulo-activo" : (pasoActual > 5 ? "circulo-completado" : "circulo-futuro"))">
+                <span>@(pasoActual > 5 ? "✓" : "5")</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="txt-tipo-cun-abrir">
+        <h2 class="txt-titulo-1">Datos personales</h2>
+        <p class="txt-subti-1">Información requerida para identificarte como titular de la cuenta.</p>
+    </div>
+
+    <div class="caja-principal">
+
+
+        <div class="subcaja-1">
+            <div class="nombre">
+                <div class="etiqueta">
+                    <label class="etiqueta-nombre">NOMBRE</label>
+                </div>
+                <div class="input-nombre">
+                    <input type="text" placeholder="Bruce" class="int"/>
+                </div>
+            </div>
+            <div class="apellido">
+                <div class="etiqueta">
+                    <label class="etiqueta-apellido">APELLIDO</label>
+                </div>
+                <div class="input-apellido">
+                    <input type="text" placeholder="Wane" class="int"/>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="subcaja-2">
+            <div class="Fecha-nacido">
+                <div class="etiqueta">
+                    <label class="etiqueta-fecha-nacido">FECHA NACIDO</label>
+                </div>
+                <div class="input-fecha-nacido">
+                    <input type="date" placeholder="mm/dd/yyyy" class="int"/>
+                </div>
+            </div>
+            <div class="Genero">
+                <div class="etiqueta">
+                    <label class="etiqueta-genero">GENERO</label>
+                </div>
+                <div class="input-genero">
+                    <select id="genero" class="selecionador-genero">
+                        <option value="" disabled selected hidden>Seleccionar</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="no-binario">No binario</option>
+                        <option value="prefiero-no-decir">Prefiero no decir</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="subcaja-3">
+            <div class="Nacionalidad">
+                <div class="etiqueta">
+                    <label class="etiqueta-nacionalidad">NACIONALIDAD</label>
+                </div>
+                <div class="input-nacionalidad">
+                    <select id="nacionalidad" class="selecionador-nacionalidad">
+                        <option value="" disabled selected hidden>Seleccionar nacionalidad</option>
+                        <option value="alemana">Alemana</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="boliviana">Boliviana</option>
+                        <option value="brasilena">Brasileña</option>
+                        <option value="canadiense">Canadiense</option>
+                        <option value="chilena">Chilena</option>
+                        <option value="china">China</option>
+                        <option value="colombiana">Colombiana</option>
+                        <option value="surcoreana">Surcoreana</option>
+                        <option value="ecuatoriana">Ecuatoriana</option>
+                        <option value="espanola">Española</option>
+                        <option value="estadounidense">Estadounidense</option>
+                        <option value="filipina">Filipina</option>
+                        <option value="francesa">Francesa</option>
+                        <option value="india">India</option>
+                        <option value="inglesa">Inglesa</option>
+                        <option value="italiana">Italiana</option>
+                        <option value="japonesa">Japonesa</option>
+                        <option value="mexicana">Mexicana</option>
+                        <option value="paraguaya">Paraguaya</option>
+                        <option value="peruana">Peruana</option>
+                        <option value="portuguesa">Portuguesa</option>
+                        <option value="rusa">Rusa</option>
+                        <option value="turca">Turca</option>
+                        <option value="uruguaya">Uruguaya</option>
+                        <option value="venezolana">Venezolana</option>
+                        <option value="otra">Otra nacionalidad</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="subcaja-4">
+            <div class="caja-btn-anterior">
+                <div class="btn-anterior" role="button"><span class="txt-btn-anterior">ANTERIOR</span></div>
+            </div>
+            <div class="btn-siguiente" role="button"><span class="txt-btn-siguiente">SIGUIENTE</span></div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+@*------------------------------------------------------------------------------------------*@
+
+@code{
+
+    private int pasoActual = 2;
+
+}

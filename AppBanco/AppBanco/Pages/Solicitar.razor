@@ -1,35 +1,161 @@
-﻿@page "/"
+﻿
 @page "/Solicitar"
-<link rel="stylesheet" href="css/Solicitar.css" />
+<link rel="stylesheet" href="css/Solicitar.css"/>
+
+
+
+
 
 <div class="Fondo-solicitar">
+
     <div class="barra-superior">
         <button class="btn-volver">Volver al inicio</button>
         <img src="imagenes.pluto/Diseños%20plutobank%20TITULO.svg" alt="titulo-plutobank" class="ing-titulo">
-        <p class="numero-pagina"> <span>1</span>  de 5</p>
+        <p class="numero-pagina"><span>@pasoActual</span> de 5</p>
     </div>
-    
+
+
     <div class="stepper">
-        <div class="paso-activo">
-            <div class="circulo"><span>1</span></div>
-            <span class="etiqueta">Tipo de cuenta</span>
+
+
+        <div class="paso-contenedor @(pasoActual == 1 ? "paso-activo" : "")">
+            <div
+                class="circulo @(pasoActual == 1 ? "circulo-activo" : (pasoActual > 1 ? "circulo-completado" : "circulo-futuro"))">
+                <span>@(pasoActual > 1 ? "✓" : "1")</span>
+            </div>
+            @if (pasoActual == 1)
+            {
+                <span class="etiqueta">Tipo de cuenta</span>
+            }
         </div>
-        <div class="linea"></div>
-        <div class="paso">
-            <div class="circulo"><span>2</span></div>
+
+        <div class="linea @(pasoActual > 1 ? "linea-completada" : "linea-futura")"></div>
+
+
+        <div class="paso-contenedor @(pasoActual == 2 ? "paso-activo" : "")">
+            <div
+                class="circulo @(pasoActual == 2 ? "circulo-activo" : (pasoActual > 2 ? "circulo-completado" : "circulo-futuro"))">
+                <span>@(pasoActual > 2 ? "✓" : "2")</span>
+            </div>
+            @if (pasoActual == 2)
+            {
+                <span class="etiqueta">Datos personales</span>
+            }
         </div>
-        <div class="linea"></div>
-        <div class="paso">
-            <div class="circulo"><span>3</span></div>
+
+        <div class="linea @(pasoActual > 2 ? "linea-completada" : "linea-futura")"></div>
+
+
+        <div class="paso-contenedor @(pasoActual == 3 ? "paso-activo" : "")">
+            <div
+                class="circulo @(pasoActual == 3 ? "circulo-activo" : (pasoActual > 3 ? "circulo-completado" : "circulo-futuro"))">
+                <span>@(pasoActual > 3 ? "✓" : "3")</span>
+            </div>
         </div>
-        <div class="linea"></div>
-        <div class="paso">
-            <div class="circulo"><span>4</span></div>
+
+        <div class="linea @(pasoActual > 3 ? "linea-completada" : "linea-futura")"></div>
+
+
+        <div class="paso-contenedor @(pasoActual == 4 ? "paso-activo" : "")">
+            <div
+                class="circulo @(pasoActual == 4 ? "circulo-activo" : (pasoActual > 4 ? "circulo-completado" : "circulo-futuro"))">
+                <span>@(pasoActual > 4 ? "✓" : "4")</span>
+            </div>
         </div>
-        <div class="linea"></div>
-        <div class="paso">
-            <div class="circulo"><span>5</span></div>
+
+        <div class="linea @(pasoActual > 4 ? "linea-completada" : "linea-futura")"></div>
+
+
+        <div class="paso-contenedor @(pasoActual == 5 ? "paso-activo" : "")">
+            <div
+                class="circulo @(pasoActual == 5 ? "circulo-activo" : (pasoActual > 5 ? "circulo-completado" : "circulo-futuro"))">
+                <span>@(pasoActual > 5 ? "✓" : "5")</span>
+            </div>
         </div>
+
     </div>
+
+
+    <div class="txt-tipo-cun-abrir">
+        <h2 class="txt-titulo-1">¿Qué tipo de cuenta deseas abrir?</h2>
+        <p class="txt-subti-1">Selecciona el producto que mejor se adapta a tus knecesidades.</p>
+    </div>
+
+    <div class="Seleccion-cun">
+        <div class="cuenta-ahorro @(CuentaElegida == "ahorro" ? "seleccionada" : "") " role="button" tabindex="0"
+             @onclick='() => CuentaElegida = ("ahorro")'>
+            <div class="txt-cuenta-ahoroo-1">
+                <strong class="txt-ahorro-titulo">Cuenta de Ahorros</strong>
+                <span class="popularidad-ahorro @(CuentaElegida == "ahorro" ? "seleccionada" : "")">Más popular</span>
+            </div>
+            <div class="txt-cuenta-ahorro-2">
+                <p class="txt-ahorro-caja-1">Ideal para ahorrar con rentabilidad anual del 3.2% y sin comisiones de
+                    mantenimiento.</p>
+            </div>
+            <div class="txt-ahorro-caja-2">
+                <p class="txt-ahorro-2"><span class="paloma">✓</span>Sin comisión de mantenimiento </p>
+                <p class="txt-ahorro-3"><span class="paloma">✓</span> Rentabilidad 3.2% anual </p>
+                <p class="txt-ahorro-4"><span class="paloma">✓</span> Retiros ilimitados</p>
+            </div>
+            <div class="marcador @(CuentaElegida == "ahorro" ? "seleccionada" : "")"></div>
+            <div class="img-icon-1"><img src="imagenes.pluto/Diseños%20plutobank-icons-1.svg" alt="plutobank icon-1"
+                                         class="img-icon1"/></div>
+        </div>
+
+        <div class="cuenta-corriente @(CuentaElegida == "corriente" ? "seleccionada" : "")" role="button" tabindex="0"
+             @onclick=' () => CuentaElegida = ("corriente")'>
+            <div class="txt-cuenta-ahoroo-1">
+                <strong class="txt-ahorro-titulo">Cuenta Corriente</strong>
+            </div>
+            <div class="txt-cuenta-ahorro-2">
+                <p class="txt-ahorro-caja-1">Para el día a día. Acceso a débito, cheques, retiros y transferencias
+                    ilimitadas.</p>
+            </div>
+            <div class="txt-ahorro-caja-2">
+                <p class="txt-ahorro-2"><span class="paloma">✓</span>Sobregiro disponible </p>
+                <p class="txt-ahorro-3"><span class="paloma">✓</span> Tarjeta de débito Preferencial </p>
+                <p class="txt-ahorro-4"><span class="paloma">✓</span> Atención ejecutiva 24/7</p>
+            </div>
+            <div class="marcador @(CuentaElegida == "corriente" ? "seleccionada-2" : "")"></div>
+            <div class="img-icon-2"><img src="imagenes.pluto/Diseños%20plutobank%20icon-2.svg" alt="plutobank icon-2"
+                                         class="img-icon2"/></div>
+        </div>
+
+        <div class="tarjeta-credito @(CuentaElegida == "credito" ? "seleccionada" : "")" role="button" tabindex="0"
+             @onclick='() => CuentaElegida = "credito"'>
+            <div class="txt-cuenta-ahoroo-1">
+                <strong class="txt-ahorro-titulo">Tarjeta de Credito</strong>
+                <span
+                    class="popularidad-ahorro @(CuentaElegida == "credito" ? "seleccionada" : "")">Por aprobacion</span>
+            </div>
+            <div class="txt-cuenta-ahorro-2">
+                <p class="txt-ahorro-caja-1">Tus pagos a tu ritmo y recuperar dinero en efectivo por cada compra..</p>
+            </div>
+            <div class="txt-ahorro-caja-2-credito">
+                <p class="txt-ahorro-2"><span class="paloma">✓</span>Acumulación de puntos </p>
+                <p class="txt-ahorro-3"><span class="paloma">✓</span> Cashback en comercios </p>
+                <p class="txt-ahorro-4"><span class="paloma">✓</span> Compras sin interés</p>
+            </div>
+            <div class="marcador @(CuentaElegida == "credito" ? "seleccionada-3" : "")"></div>
+            <div class="img-icon-1"><img src="imagenes.pluto/Diseños%20plutobank%20icon-3.svg" alt="plutobank icon-3"
+                                         class="img-icon3"/></div>
+            <div class="color-m">
+
+            </div>
+        </div>
+
+
+        <div class="btn-continuar" role="button" tabindex="0">Continuar</div>
+
+    </div>
+
 </div>
 
+
+@code
+{
+    private int pasoActual = 1;
+
+    private string CuentaElegida = "";
+
+}

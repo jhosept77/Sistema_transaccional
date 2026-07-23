@@ -1,22 +1,26 @@
 ﻿
 .Fondo-solicitar{
-    position: sticky;
+    position: relative;
     top: 0;
     width: 100%;
-    height: 100vh;
-    background: steelblue;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    background: #e3f2fd;
     font-family: 'Montserrat', sans-serif;
+    padding-bottom: 60px;
 }
 
 .barra-superior{
-    position: sticky;
+    position: fixed;
+    z-index: 1000;
     display: flex;
     top: 0;
     width: 100%;
     height: 10vh;
     background: #e3f2fd;
     align-content: center;
-    padding: 20px;
+    padding: 0 20px;
     justify-content: space-between;
 }
 
@@ -50,7 +54,7 @@
     gap: 15px;
     justify-content: center;
     align-content: center;
-    margin-top: 20px;
+    margin-top: 80px;
     box-sizing: border-box;
     padding-top: 40px;
     
@@ -68,6 +72,7 @@
     position: absolute;
     top: 40px;
     white-space: nowrap;
+    margin-left: 75px;
 }
 
 
@@ -90,3 +95,248 @@
     justify-content: center;
     align-items: center;
 }
+
+
+.circulo-activo{
+    background: transparent;
+    border: 2px solid midnightblue;
+    color: midnightblue;
+}
+
+.circulo-completado{
+    background: midnightblue;
+    color: #e3f2fd;
+}
+
+.linea-completada{
+    background: midnightblue;
+}
+.circulo-futuro{
+    background: #1c2638;
+    color: #e3f2fd;
+}
+
+.linea-futuro{
+    background: #1c2638;
+}
+
+.paso-contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.txt-tipo-cun-abrir{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    margin-left: 320px;¿height: 30vh;
+    margin-top: -70px;
+}
+
+.txt-titulo-1{
+    font-size: 2rem;
+}
+
+.Seleccion-cun{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.cuenta-ahorro{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 850px;
+    height: 120px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap: 8px;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 25px;
+    margin-right: 30px;
+    
+}
+
+.txt-cuenta-ahoroo-1{
+    display: flex;
+    gap: 16px;
+}
+
+.txt-ahorro-caja-1{
+    display: flex;
+    margin-left: 100px;
+}
+
+.txt-ahorro-caja-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-left: 30px;
+}
+
+.txt-ahorro-caja-2-credito{
+    display: flex;
+    gap: 24px;
+    margin-left: 99px;
+}
+
+.txt-cuenta-ahoroo-1{
+    display: flex;
+    margin-left: 100px;
+}
+
+.popularidad-ahorro{
+    padding: 3px 10px;
+    border-radius: 10px;
+    background: lightskyblue;
+    font-size: 14px;
+}
+
+.marcador{
+    position: absolute;
+    background: black;
+    width: 20px;
+    height: 20px;
+    left: 800px;
+    top: 15px;
+    border-radius: 50%;
+}
+
+.cuenta-corriente {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 850px;
+    height: 120px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap: 8px;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 25px;
+    margin-right: 30px;
+}
+
+.tarjeta-credito {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 850px;
+    height: 120px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap: 8px;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 25px;
+    margin-right: 30px;
+}
+
+.img-icon-1{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.img-icon1 {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    margin-top: -90px;
+    margin-left: 19px;
+    
+}
+
+.img-icon-2{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.img-icon2 {
+    position: absolute;
+    width: 40px;
+    height: auto;
+    margin-top: -90px;
+    margin-left: 25px;
+}
+
+.img-icon-3{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.img-icon3 {
+    position: absolute;
+    width: 45px;
+    height: auto;
+    margin-top: -90px;
+    margin-left: 25px;
+}
+
+.btn-continuar{
+    display: flex;
+    width: 850px;
+    height: 50px;
+    border-radius: 30px;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    margin-top: 25px;
+}
+
+.cuenta-ahorro:hover,.tarjeta-credito:hover,.cuenta-corriente:hover{
+    border: 2px solid transparent;
+    box-shadow: 0 0 15px rgba(25, 25, 112, 0.6);
+    transition: all 0.1s ease;
+}
+
+.btn-continuar:hover{
+    border: 2px solid deepskyblue;
+}
+
+.tarjeta-credito.seleccionada{
+    background: #1c2638;
+    color: #e3f2fd;
+}
+
+.cuenta-ahorro.seleccionada{
+    background: #1c2638;
+    color: #e3f2fd;
+}
+
+.cuenta-corriente.seleccionada{
+    background: #1c2638;
+    color: #e3f2fd;
+}
+
+.popularidad-ahorro.seleccionada{
+    background: lightskyblue;
+    color: black;
+}
+
+.popularidad-ahorro.seleccionada{
+    background: lightskyblue;
+}
+
+.marcador.seleccionada,.marcador.seleccionada-2,.marcador.seleccionada-3{
+    background: lightskyblue;
+}
+
+.paloma{
+    color: deepskyblue;
+}
+
+

@@ -1,0 +1,102 @@
+﻿@page "/"
+@page "/Solicitar-page-2"
+<link rel="stylesheet" href="css/Solicitar-page-3.css"/>
+
+<div class="Fondo-Solicitar-page-3">
+    
+     <div class="barra-superior">
+        <button class="btn-volver">Volver al inicio</button>
+        <img src="imagenes.pluto/Diseños%20plutobank%20TITULO.svg" alt="titulo-plutobank" class="ing-titulo">
+        <p class="numero-pagina"><span>@pasoActual</span> de 5</p>
+
+    </div>
+
+
+   <div class="stepper">
+
+
+        <div class="paso-contenedor @(pasoActual == 1 ? "paso-activo" : "")">
+            <div
+                class="circulo @(pasoActual == 1 ? "circulo-activo" : (pasoActual > 1 ? "circulo-completado" : "circulo-futuro"))">
+                <span>@(pasoActual > 1 ? "✓" : "1")</span>
+            </div>
+            @if (pasoActual == 1)
+            {
+                <span class="etiqueta">Tipo de cuenta</span>
+            }
+        </div>
+
+        <div class="linea @(pasoActual > 1 ? "linea-completada" : "linea-futura")"></div>
+
+
+        <div class="paso-contenedor @(pasoActual == 2 ? "paso-activo" : "")">
+            <div
+                class="circulo @(pasoActual == 2 ? "circulo-activo" : (pasoActual > 2 ? "circulo-completado" : "circulo-futuro"))">
+                <span>@(pasoActual > 2 ? "✓" : "2")</span>
+            </div>
+            @if (pasoActual == 2)
+            {
+                <span class="etiqueta">Datos personales</span>
+            }
+        </div>
+
+        <div class="linea @(pasoActual > 2 ? "linea-completada" : "linea-futura")"></div>
+
+
+        <div class="paso-contenedor @(pasoActual == 3 ? "paso-activo" : "")">
+            <div
+                class="circulo @(pasoActual == 3 ? "circulo-activo" : (pasoActual > 3 ? "circulo-completado" : "circulo-futuro"))">
+                <span>@(pasoActual > 3 ? "✓" : "3")</span>
+            </div>
+        </div>
+
+        <div class="linea @(pasoActual > 3 ? "linea-completada" : "linea-futura")"></div>
+
+
+        <div class="paso-contenedor @(pasoActual == 4 ? "paso-activo" : "")">
+            <div
+                class="circulo @(pasoActual == 4 ? "circulo-activo" : (pasoActual > 4 ? "circulo-completado" : "circulo-futuro"))">
+                <span>@(pasoActual > 4 ? "✓" : "4")</span>
+            </div>
+        </div>
+
+        <div class="linea @(pasoActual > 4 ? "linea-completada" : "linea-futura")"></div>
+
+
+        <div class="paso-contenedor @(pasoActual == 5 ? "paso-activo" : "")">
+            <div
+                class="circulo @(pasoActual == 5 ? "circulo-activo" : (pasoActual > 5 ? "circulo-completado" : "circulo-futuro"))">
+                <span>@(pasoActual > 5 ? "✓" : "5")</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="txt-tipo-cun-abrir">
+        <h2 class="txt-titulo-1">Datos personales</h2>
+        <p class="txt-subti-1">Información requerida para identificarte como titular de la cuenta.</p>
+    </div>
+    
+    <div class="caja-principal">
+        
+        
+        
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+@*------------------------------------------------------------------------------------------------------*@
+
+
+
+@code {
+
+    private int pasoActual = 3;
+
+}
